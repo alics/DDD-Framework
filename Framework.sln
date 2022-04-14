@@ -3,7 +3,79 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Api", "Framework.Api\Framework.Api.csproj", "{758FF24E-F030-4119-A9E0-7C2D235DFD04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Application", "Framework.Application\Framework.Application.csproj", "{B90542FA-8275-46F7-8060-3BE78176BFA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Config", "Framework.Config\Framework.Config.csproj", "{A2EFE3CE-3C24-4117-93D5-1267DF731E88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Core", "Framework.Core\Framework.Core.csproj", "{DCA7829B-D16D-4BF5-9996-D940CF973D77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Domain", "Framework.Domain\Framework.Domain.csproj", "{20642423-0574-434A-8746-FF84C80BC835}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Persistence", "Framework.Persistence\Framework.Persistence.csproj", "{CD50676B-047F-43EC-89F7-580A9708B955}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Persistence.EF", "Framework.Persistence.EF\Framework.Persistence.EF.csproj", "{BDF7F7F5-CEFF-4F0A-8188-E07D8E82C07C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Snowflake", "Framework.Snowflake\Framework.Snowflake.csproj", "{97FDC022-0BD5-4506-BBD2-C36CF9D13414}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Logging.Sql", "Framework.Logging.Sql\Framework.Logging.Sql.csproj", "{5FEFC3B4-F0D9-4737-A5FE-AA466FC39DF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Logging.Elasticsearch", "Framework.Logging.Elasticsearch\Framework.Logging.Elasticsearch.csproj", "{D7B47A27-3A2F-4EC4-AD0E-DBCFEACC35E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.NCalcExperssions", "Framework.NCalcExperssions\Framework.NCalcExperssions.csproj", "{7717B1FE-E298-4FC1-A030-6E841DA09B07}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{758FF24E-F030-4119-A9E0-7C2D235DFD04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758FF24E-F030-4119-A9E0-7C2D235DFD04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758FF24E-F030-4119-A9E0-7C2D235DFD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758FF24E-F030-4119-A9E0-7C2D235DFD04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90542FA-8275-46F7-8060-3BE78176BFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90542FA-8275-46F7-8060-3BE78176BFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90542FA-8275-46F7-8060-3BE78176BFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90542FA-8275-46F7-8060-3BE78176BFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EFE3CE-3C24-4117-93D5-1267DF731E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EFE3CE-3C24-4117-93D5-1267DF731E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EFE3CE-3C24-4117-93D5-1267DF731E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EFE3CE-3C24-4117-93D5-1267DF731E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA7829B-D16D-4BF5-9996-D940CF973D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA7829B-D16D-4BF5-9996-D940CF973D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA7829B-D16D-4BF5-9996-D940CF973D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA7829B-D16D-4BF5-9996-D940CF973D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20642423-0574-434A-8746-FF84C80BC835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20642423-0574-434A-8746-FF84C80BC835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20642423-0574-434A-8746-FF84C80BC835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20642423-0574-434A-8746-FF84C80BC835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD50676B-047F-43EC-89F7-580A9708B955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD50676B-047F-43EC-89F7-580A9708B955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD50676B-047F-43EC-89F7-580A9708B955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD50676B-047F-43EC-89F7-580A9708B955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF7F7F5-CEFF-4F0A-8188-E07D8E82C07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF7F7F5-CEFF-4F0A-8188-E07D8E82C07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF7F7F5-CEFF-4F0A-8188-E07D8E82C07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF7F7F5-CEFF-4F0A-8188-E07D8E82C07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FDC022-0BD5-4506-BBD2-C36CF9D13414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FDC022-0BD5-4506-BBD2-C36CF9D13414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FDC022-0BD5-4506-BBD2-C36CF9D13414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FDC022-0BD5-4506-BBD2-C36CF9D13414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEFC3B4-F0D9-4737-A5FE-AA466FC39DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEFC3B4-F0D9-4737-A5FE-AA466FC39DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEFC3B4-F0D9-4737-A5FE-AA466FC39DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEFC3B4-F0D9-4737-A5FE-AA466FC39DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B47A27-3A2F-4EC4-AD0E-DBCFEACC35E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B47A27-3A2F-4EC4-AD0E-DBCFEACC35E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B47A27-3A2F-4EC4-AD0E-DBCFEACC35E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B47A27-3A2F-4EC4-AD0E-DBCFEACC35E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7717B1FE-E298-4FC1-A030-6E841DA09B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7717B1FE-E298-4FC1-A030-6E841DA09B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7717B1FE-E298-4FC1-A030-6E841DA09B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7717B1FE-E298-4FC1-A030-6E841DA09B07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

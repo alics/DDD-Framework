@@ -1,8 +1,7 @@
-﻿using Framework.Core.Security;
-using Fwutech.Common.Constants;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
+using Framework.Core.Security;
 
 namespace Framework.Api.Filters
 {
@@ -27,16 +26,11 @@ namespace Framework.Api.Filters
             var authorizationService = (Core.Security.IAuthorizationService)context.HttpContext.RequestServices
                 .GetService(typeof(Core.Security.IAuthorizationService));
 
-            bool isAuthorized;
-            if (user.Identity.Name == WorkflowConstants.SYSTEM)
-            {
-                isAuthorized = true;
-            }
-            else
-            {
-                isAuthorized = authorizationService.IsAuthorized(user.Identity.Name, _securityOperationCode)
-                                                   .ConfigureAwait(false).GetAwaiter().GetResult();
-            }
+
+
+            bool isAuthorized = authorizationService.IsAuthorized(user.Identity.Name, _securityOperationCode)
+                                                  .ConfigureAwait(false).GetAwaiter().GetResult();
+
 
             if (!isAuthorized)
             {

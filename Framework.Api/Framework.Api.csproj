@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\OM\Fwutech.CRM.OM.ApplicationServices.Contracts\Fwutech.CRM.OM.ApplicationServices.Contracts.csproj" />
     <ProjectReference Include="..\Framework.Application\Framework.Application.csproj" />
     <ProjectReference Include="..\Framework.Core\Framework.Core.csproj" />
   </ItemGroup>
