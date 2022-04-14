@@ -1,7 +1,14 @@
-﻿namespace Framework.Core
+﻿using System.Threading.Tasks;
+
+namespace Framework.Core
 {
     public interface IUnitOfWork
     {
-        void Commit();
+        Task BeginTransaction();
+        Task SaveChangesAsync();
+        Task CommitAsync();
+        Task RollbackAsync();
+
+        Task AddOutboxMessage(OutboxMessage outboxMessage);
     }
 }

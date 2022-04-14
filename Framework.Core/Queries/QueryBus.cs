@@ -1,20 +1,24 @@
-﻿using Framework.Core.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Framework.Core.Queries
 {
     public class QueryBus : IQueryBus
     {
-        public TQueryResult Dispatch<TQueryFilter, TQueryResult>(TQueryFilter filter)
+        private readonly IServiceProvider _serviceProvider;
+
+        public QueryBus(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
+
+        public async Task<TQueryResult> Dispatch<TQueryFilter, TQueryResult>(TQueryFilter filter)
             where TQueryFilter : IQueryFilter
             where TQueryResult : IQueryResult
         {
-            var handler = ServiceLocator.Current.Resolve<IQueryHandler<TQueryFilter, TQueryResult>>();
-            var result = handler.Handle(filter);
+            var handler = _serviceProvider.GetService<IQueryHandler<TQueryFilter, TQueryResult>>();
+            var result = await handler.HandleAsync(filter);
             return result;
         }
     }

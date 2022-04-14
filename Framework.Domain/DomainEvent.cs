@@ -1,14 +1,24 @@
-﻿using Framework.Core.Events;
+﻿using Framework.Core;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Framework.Domain
 {
     public abstract class DomainEvent: IEvent
     {
-        public DomainEvent()
+        protected DomainEvent()
         {
-            OccuredOn = DateTime.Now;
+            
         }
-        public DateTime OccuredOn { get; private set; }
+
+        protected DomainEvent(string aggregateId)
+        {
+            AggregateId = aggregateId;
+            OccurredOn = DateTime.UtcNow;
+        }
+
+        public DateTime OccurredOn { get; private set; }
+
+        public string AggregateId { get; set; }
     }
 }
